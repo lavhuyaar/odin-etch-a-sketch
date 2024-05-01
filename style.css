@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: rgb(53, 51, 51);
+  background-color: #9984D4;
 }
 
 .container {
@@ -18,14 +18,14 @@ body {
   flex-direction: row;
   width: 800px;
   height: 800px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 3px solid rgb(0, 0, 0);
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: stretch;
-  background-color: khaki;
+  background-color: #59138a;
 }
 
-.gridRow {
+.row {
   width: 100%;
   height: 100%;
   display: flex;
@@ -36,6 +36,21 @@ body {
   flex: 1;
   min-width: 2px;
   min-height: 2px;
-  background-color: crimson;
-  border: 0.1px solid black;
+  background-color: #230C33;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.start-btn {
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+  background-color: #CAA8F5;
+  border: 3px solid black;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.start-btn:hover {
+  background-color: #9267ca;
 }
