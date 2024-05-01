@@ -9,16 +9,11 @@ startBtn.addEventListener("click", startGame);
 function startGame() {
     // deleteGrids();
     let userNum = prompt("Enter the no. :");
-    if(userNum < 100 && userNum > 0) {
+    if(userNum <= 100 && userNum > 0) {
         createGrid(userNum);
-        // reset(userNum);
+        console.log(userNum);
     }
 }
-
-// function reset(num) {
-//     num = 0;
-// }
-
 
 function makeRows(rowNum) {
     for(let i=0; i < rowNum; i++) {
@@ -33,6 +28,12 @@ function makeColumns(columnNum) {
         for(let j = 0; j < columnNum; j++) {
             let cell = document.createElement("div");
             rows[j].appendChild(cell).className = "cell";
+
+            cell.addEventListener("mouseenter", () => {
+                cell.style.backgroundColor = "white";
+
+            })
+
         } 
     }
    }
@@ -41,10 +42,7 @@ function makeColumns(columnNum) {
 function createGrid(num) {
     makeRows(num);
     makeColumns(num);
-    // cells.addEventListener("click", () => {
-    //     cells.style.backgroundColor = "white";
-    //     console.log("click");
-    // })
+    
 }
 
 
